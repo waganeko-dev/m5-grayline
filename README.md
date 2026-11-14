@@ -8,7 +8,7 @@ over Wi-Fi (NTP).
 
 | Photo style (default) | Twilight zones | Grid + Moon overlay | Info screen |
 | --- | --- | --- | --- |
-| ![Photo style map](docs/images/map-photo.png) | ![Twilight zones map](docs/images/map-zones.png) | ![Grid and Moon overlay](docs/images/map-overlay.png) | ![Info screen](docs/images/info-screen.png) |
+| ![Photo style map](docs/src/assets/images/map-photo.png) | ![Twilight zones map](docs/src/assets/images/map-zones.png) | ![Grid and Moon overlay](docs/src/assets/images/map-overlay.png) | ![Info screen](docs/src/assets/images/info-screen.png) |
 
 ## Features
 

@@ -1,0 +1,64 @@
+---
+// Web Flasher button (ESP Web Tools). The firmware and manifest are placed in
+// public/firmware/ by tools/package_firmware.py (release workflow, or
+// `npm run firmware:local` for a local check).
+interface Props { lang: 'ja' | 'en' }
+const { lang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const manifest = `${base}/firmware/manifest.json`;
+const t = lang === 'ja'
+  ? {
+      connect: '接続して書き込む',
+      unsupported: 'このブラウザは Web Serial に対応していません。パソコンの Google Chrome または Microsoft Edge で開いてください。',
+      notAllowed: 'Web Flasher は HTTPS のページ (または localhost) でのみ使えます。',
+      missing: 'ファームウェアがまだ配置されていません。ローカルで確認する場合は、docs フォルダで "npm run firmware:local" を実行してください。',
+      version: 'ファームウェアのバージョン:',
+    }
+  : {
+      connect: 'Connect and install',
+      unsupported: 'This browser does not support Web Serial. Open this page in Google Chrome or Microsoft Edge on a computer.',
+      notAllowed: 'The Web Flasher works only on HTTPS pages (or localhost).',
+      missing: 'No firmware has been published here yet. For a local check, run "npm run firmware:local" in the docs folder.',
+      version: 'Firmware version:',
+    };
+---
+
+<div class="flasher" data-manifest={manifest} data-missing={t.missing} data-version-label={t.version}>
+  <esp-web-install-button manifest={manifest}>
+    <button slot="activate" class="flash-button">{t.connect}</button>
+    <span slot="unsupported" class="flash-note">{t.unsupported}</span>
+    <span slot="not-allowed" class="flash-note">{t.notAllowed}</span>
+  </esp-web-install-button>
+  <p class="flash-version"></p>
+</div>
+
+<script>
+  import 'esp-web-tools/dist/web/install-button.js';
+
+  for (const el of document.querySelectorAll<HTMLElement>('.flasher')) {
+    const info = el.querySelector('.flash-version')!;
+    fetch(el.dataset.manifest!)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((m) => { info.textContent = `${el.dataset.versionLabel} ${m.version}`; })
+      .catch(() => {
+        info.textContent = el.dataset.missing!;
+        el.querySelector('esp-web-install-button')?.setAttribute('hidden', '');
+      });
+  }
+</script>
+
+<style>
+  .flasher { margin: 1.5rem 0; }
+  .flash-button {
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    font-size: var(--sl-text-base);
+    font-weight: 600;
+    color: var(--sl-color-black);
+    background: var(--sl-color-accent-high);
+  }
+  .flash-note { color: var(--sl-color-orange); }
+  .flash-version { font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); }
+</style>

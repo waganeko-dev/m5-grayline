@@ -1,0 +1,25 @@
+---
+title: Web Flasher
+description: ブラウザから m5-grayline のファームウェアを書き込みます。
+---
+
+import Flasher from '../../components/Flasher.astro';
+
+ブラウザから、M5Stack Basic に m5-grayline のファームウェアを書き込めます。書き込むのは、ブートローダーとパーティションテーブルを含む一括イメージ (アドレス `0x0`) です。
+
+:::caution[対応ブラウザ]
+Web Flasher は Web Serial API を使うため、パソコンの **Google Chrome** と **Microsoft Edge** でのみ動作します。Safari、Firefox、スマートフォンのブラウザには対応していません。
+:::
+
+## 手順
+
+1. 本体を USB ケーブルでパソコンに接続します。ポートが現れない場合は、[書き込み方法](../install/#準備-パソコンと本体の接続) を参照して、CH9102 のドライバーをインストールしてください。
+2. 次のボタンを押し、表示された一覧から本体のシリアルポートを選びます。
+3. "Install" を選びます。消去 (Erase) を確認された場合、消去すると本体に記憶している地図の表示方法や GeoIP の結果も消えます。microSD の `config.json` は消えません。
+4. 書き込みが終わると、本体が再起動します。
+
+<Flasher lang="ja" />
+
+## 書き込んだあと
+
+[設定 (config.json)](../config/) で、Wi-Fi と自局の位置を設定してください。
