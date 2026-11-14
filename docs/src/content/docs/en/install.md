@@ -31,7 +31,7 @@ Open the [Web Flasher](../flasher/) page and click "Connect and install". See th
 
 ## Installing with esptool
 
-Each release on [GitHub Releases](https://github.com/atsuo-takahashi/m5-grayline/releases) has two files:
+Each release on [GitHub Releases](https://github.com/waganeko-dev/m5-grayline/releases) has two files:
 
 | File | Address | Contents |
 | --- | --- | --- |
@@ -51,12 +51,12 @@ With older esptool versions (v4 and earlier), the command is `esptool.py` and th
 Install [PlatformIO](https://platformio.org/), get the repository, and run the following commands:
 
 ```bash
-git clone https://github.com/atsuo-takahashi/m5-grayline.git
+git clone https://github.com/waganeko-dev/m5-grayline.git
 cd m5-grayline
 pio run -t upload
 ```
 
-To choose the port, add `--upload-port <port>`. For more about building, see [docs/DEVELOPMENT.md](https://github.com/atsuo-takahashi/m5-grayline/blob/main/docs/DEVELOPMENT.md) in the repository (in Japanese).
+To choose the port, add `--upload-port <port>`. For more about building, see [docs/DEVELOPMENT.md](https://github.com/waganeko-dev/m5-grayline/blob/main/docs/DEVELOPMENT.md) in the repository (in Japanese).
 
 ## After installing
 

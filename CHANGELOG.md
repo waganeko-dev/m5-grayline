@@ -42,5 +42,5 @@
 - ファームウェアのバージョン表示 (起動時と詳細画面)
 - 単体テスト (`pio test -e native`) と実機の画面確認スクリプト (`tools/sweep_locations.py`)
 
-[Unreleased]: https://github.com/atsuo-takahashi/m5-grayline/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/atsuo-takahashi/m5-grayline/releases/tag/v0.2.0
+[Unreleased]: https://github.com/waganeko-dev/m5-grayline/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/waganeko-dev/m5-grayline/releases/tag/v0.2.0

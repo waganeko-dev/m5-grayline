@@ -5,7 +5,7 @@ description: m5-grayline のライセンスと、使用しているデータ、�
 
 ## ライセンス
 
-m5-grayline は [MIT ライセンス](https://github.com/atsuo-takahashi/m5-grayline/blob/main/LICENSE) で公開しています。サードパーティのライブラリとデータには、それぞれのライセンスが適用されます。詳しくは [THIRD_PARTY_NOTICES.md](https://github.com/atsuo-takahashi/m5-grayline/blob/main/THIRD_PARTY_NOTICES.md) を参照してください。
+m5-grayline は [MIT ライセンス](https://github.com/waganeko-dev/m5-grayline/blob/main/LICENSE) で公開しています。サードパーティのライブラリとデータには、それぞれのライセンスが適用されます。詳しくは [THIRD_PARTY_NOTICES.md](https://github.com/waganeko-dev/m5-grayline/blob/main/THIRD_PARTY_NOTICES.md) を参照してください。
 
 ## 地図のデータ
 

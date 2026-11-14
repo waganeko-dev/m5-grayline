@@ -12,7 +12,7 @@ m5-grayline reads its settings from `/grayline/config.json` on the microSD card.
 3. Open `/grayline/config.json` in a text editor and fill in `wifi.ssid` and `wifi.password`. Change other settings, such as your location, as needed.
 4. Put the card back in the device and turn it on.
 
-You can also copy [config.example.json](https://github.com/atsuo-takahashi/m5-grayline/blob/main/config.example.json) to the card as `/grayline/config.json` and edit it.
+You can also copy [config.example.json](https://github.com/waganeko-dev/m5-grayline/blob/main/config.example.json) to the card as `/grayline/config.json` and edit it.
 
 :::note
 The automatically created `config.json` has no latitude / longitude (`home.lat` and `home.lon`). If you keep it that way, the device estimates its location with GeoIP after connecting to Wi-Fi and synchronizing the time. To avoid GeoIP, fill in your latitude and longitude (see [GeoIP and privacy](#geoip-and-privacy)).

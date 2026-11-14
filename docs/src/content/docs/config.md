@@ -12,7 +12,7 @@ m5-grayline の設定は、microSD カードの `/grayline/config.json` に書�
 3. `/grayline/config.json` をテキストエディターで開き、`wifi.ssid` と `wifi.password` を記入します。必要に応じて、自局の位置などを設定します。
 4. microSD カードを本体に戻して起動します。
 
-[config.example.json](https://github.com/atsuo-takahashi/m5-grayline/blob/main/config.example.json) を `/grayline/config.json` として microSD にコピーし、書き換えて使うこともできます。
+[config.example.json](https://github.com/waganeko-dev/m5-grayline/blob/main/config.example.json) を `/grayline/config.json` として microSD にコピーし、書き換えて使うこともできます。
 
 :::note
 自動作成された `config.json` には、自局の緯度経度 (`home.lat` と `home.lon`) が含まれていません。そのまま使うと、Wi-Fi に接続して時刻を同期したときに GeoIP で位置を推定します。GeoIP を使わない場合は、緯度経度を記入してください (後述の "[GeoIP とプライバシー](#geoip-とプライバシー)" を参照)。

@@ -31,7 +31,7 @@ M5Stack Basic V2.6 は、USB シリアル変換 IC に CH9102 を使っていま
 
 ## esptool で書き込む
 
-[GitHub Releases](https://github.com/atsuo-takahashi/m5-grayline/releases) には、リリースごとに次の 2 つのファイルがあります。
+[GitHub Releases](https://github.com/waganeko-dev/m5-grayline/releases) には、リリースごとに次の 2 つのファイルがあります。
 
 | ファイル | 書き込むアドレス | 内容 |
 | --- | --- | --- |
@@ -51,12 +51,12 @@ esptool --chip esp32 --port <port> --baud 921600 write-flash 0x0 m5-grayline-vX.
 [PlatformIO](https://platformio.org/) をインストールし、リポジトリを取得してから、リポジトリのフォルダで次のコマンドを実行します。
 
 ```bash
-git clone https://github.com/atsuo-takahashi/m5-grayline.git
+git clone https://github.com/waganeko-dev/m5-grayline.git
 cd m5-grayline
 pio run -t upload
 ```
 
-ポートを指定する場合は、`--upload-port <port>` を付けます。ビルドの詳細は、リポジトリの [docs/DEVELOPMENT.md](https://github.com/atsuo-takahashi/m5-grayline/blob/main/docs/DEVELOPMENT.md) を参照してください。
+ポートを指定する場合は、`--upload-port <port>` を付けます。ビルドの詳細は、リポジトリの [docs/DEVELOPMENT.md](https://github.com/waganeko-dev/m5-grayline/blob/main/docs/DEVELOPMENT.md) を参照してください。
 
 ## 書き込んだあと
 

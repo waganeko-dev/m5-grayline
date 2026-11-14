@@ -5,7 +5,7 @@ description: The license of m5-grayline and the data, libraries and services it 
 
 ## License
 
-m5-grayline is released under the [MIT License](https://github.com/atsuo-takahashi/m5-grayline/blob/main/LICENSE). Third-party libraries and data are under their own licenses; see [THIRD_PARTY_NOTICES.md](https://github.com/atsuo-takahashi/m5-grayline/blob/main/THIRD_PARTY_NOTICES.md).
+m5-grayline is released under the [MIT License](https://github.com/waganeko-dev/m5-grayline/blob/main/LICENSE). Third-party libraries and data are under their own licenses; see [THIRD_PARTY_NOTICES.md](https://github.com/waganeko-dev/m5-grayline/blob/main/THIRD_PARTY_NOTICES.md).
 
 ## Map data
 

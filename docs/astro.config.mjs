@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import { REPO_URL } from './src/site.config.mjs';
 
 export default defineConfig({
-  site: 'https://atsuo-takahashi.github.io',
+  site: 'https://waganeko-dev.github.io',
   base: '/m5-grayline',
   integrations: [
     starlight({
