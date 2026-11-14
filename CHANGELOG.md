@@ -10,6 +10,10 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-15
+
+マニュアルのみの更新です。ファームウェアの動作は 0.2.0 から変わりません。
+
 ### 変更
 
 - マニュアルのフッターのブログ記事へのリンクを、公開した紹介記事 (日本語版・英語版) に差し替えました。英語のページからは英語版の記事を開きます。
@@ -46,5 +50,6 @@
 - ファームウェアのバージョン表示 (起動時と詳細画面)
 - 単体テスト (`pio test -e native`) と実機の画面確認スクリプト (`tools/sweep_locations.py`)
 
-[Unreleased]: https://github.com/waganeko-dev/m5-grayline/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/waganeko-dev/m5-grayline/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/waganeko-dev/m5-grayline/releases/tag/v0.2.1
 [0.2.0]: https://github.com/waganeko-dev/m5-grayline/releases/tag/v0.2.0
