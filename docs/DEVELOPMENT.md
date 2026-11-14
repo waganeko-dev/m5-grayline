@@ -4,6 +4,18 @@
 
 この文書では、m5-grayline のビルド、テスト、デバッグに使うシリアルコマンドとツール、バージョンの付け方を説明します。
 
+## 開発の流れ
+
+ブランチ、PR、リリースの規則は [AGENTS.md](../AGENTS.md) にまとめています (AI エージェントと人間の共通の規則です)。要点は次のとおりです。
+
+- main には直接 push せず、PR を経由します。PR は squash でマージします。
+- ブランチ名は `feature/`、`fix/`、`docs/`、`chore/` のいずれかで始め、続けて小文字とハイフンで内容を書きます (例: `feature/moon-overlay`)。
+- clone したら、最初に次のコマンドで pre-push フックを有効にします。規則に合わないブランチ名や main への push を、手元で止めます。
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## ビルドと書き込み
 
 [PlatformIO](https://platformio.org/) を使います。
