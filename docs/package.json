@@ -1,0 +1,17 @@
+{
+  "name": "m5-grayline-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "firmware:local": "cd .. && pio run && python3 tools/package_firmware.py --web docs/public"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.42.8",
+    "astro": "7.4.7",
+    "esp-web-tools": "10.4.0",
+    "sharp": "0.35.5"
+  }
+}

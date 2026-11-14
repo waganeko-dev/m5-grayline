@@ -1,0 +1,30 @@
+---
+// Starlight's footer plus a link box to the blog article (URL in src/site.config.mjs).
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { BLOG_URL } from '../site.config.mjs';
+
+const isJa = Astro.locals.starlightRoute.lang === 'ja';
+const text = isJa
+  ? { title: 'ブログ記事', body: '開発の経緯や使い方の紹介は、ブログ記事を参照してください。', link: 'ブログ記事を読む' }
+  : { title: 'Blog article', body: 'Read the blog article for the background and more examples.', link: 'Read the article' };
+---
+
+<Default />
+<aside class="blog-box" aria-label={text.title}>
+  <p class="blog-title">{text.title}</p>
+  <p>{text.body}</p>
+  <a href={BLOG_URL} rel="noopener">{text.link} →</a>
+</aside>
+
+<style>
+  .blog-box {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background: var(--sl-color-gray-6);
+    font-size: var(--sl-text-sm);
+  }
+  .blog-box p { margin: 0 0 0.5rem; }
+  .blog-title { font-weight: 600; color: var(--sl-color-white); }
+</style>

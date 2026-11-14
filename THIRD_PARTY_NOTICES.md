@@ -51,6 +51,15 @@ rebuilt with a modified version of the core.
 
 Used only by `pio test -e native`; not included in the firmware.
 
+### User manual and Web Flasher (docs/, not part of the firmware)
+
+The manual site published on GitHub Pages is built with
+[Astro](https://astro.build/) and [Starlight](https://starlight.astro.build/)
+(MIT License). The Web Flasher page uses
+[ESP Web Tools](https://github.com/esphome/esp-web-tools)
+(Copyright (c) ESPHome maintainers, Apache-2.0), which is bundled into the site.
+The exact versions are pinned in `docs/package.json` and `docs/package-lock.json`.
+
 ## Data
 
 ### NASA Blue Marble / Earth at Night

@@ -38,10 +38,42 @@ USB シリアル変換 IC (CH9102) の自動リセット回路により、PC の
 - `tools/gen_photomaps.py`: 昼夜の地球の画像 (NASA、パブリックドメイン、Wikimedia Commons の "Whole world - land and oceans.jpg" と "The earth at night.jpg") から `src/photomaps.h` (RGB565、各 100KB) を生成します。画像の読み込みと縮小には、Pillow があれば Pillow を、なければ macOS の `sips` を使います。
 - `tools/screenshot.py`: シリアル経由で画面を PNG に保存します。起動完了を待ってから取得します。第 3 引数で、先にキーを送信できます (`c` で詳細画面)。
 - `tools/version.py`: ビルド時に Git からバージョンを埋め込みます (後述)。
+- `tools/package_firmware.py`: `pio run` のあとに実行し、一括イメージ (`0x0` に書き込む `*-full.bin`) とアプリケーション単体のイメージ (`0x10000` に書き込む `*-app.bin`) を `out/` に作ります。ブートローダーなどのアドレスは `pio project metadata` から読み取ります。`--web docs/public` を付けると、Web Flasher 用に `docs/public/firmware/<version>/` と `manifest.json` も作ります。
 
 ```bash
 python tools/screenshot.py <port> out.png c
 ```
+
+## マニュアル (docs/)
+
+ユーザーマニュアルは [Astro Starlight](https://starlight.astro.build/) で作り、GitHub Pages で公開します。Node.js と npm が必要です。ページは `docs/src/content/docs/` にあり、日本語が既定 (ルート)、英語が `en/` です。画面の画像は `docs/src/assets/images/` にあります。
+
+```bash
+cd docs
+npm ci
+npm run dev      # 編集しながら確認 (http://localhost:4321/m5-grayline/)
+npm run build    # docs/dist/ に出力
+npm run preview  # ビルド結果を確認
+```
+
+Web Flasher をローカルで確認するには、現在のソースからファームウェアをビルドし、`docs/public/firmware/` に配置します。このフォルダは Git の管理対象外です。
+
+```bash
+cd docs
+npm run firmware:local
+```
+
+ブログ記事へのリンクの URL は `docs/src/site.config.mjs` の `BLOG_URL` で設定します。
+
+## CI とリリース
+
+- `.github/workflows/ci.yml`: push と pull request で、単体テスト、ファームウェアのビルド、マニュアルのビルドを実行します。
+- `.github/workflows/release.yml`: `v*` のタグを push すると、テストとビルドのあと、一括イメージとアプリケーション単体のイメージを添付した GitHub Release を作ります。本文は `CHANGELOG.md` の該当バージョンの節です。続いて、ファームウェアを同梱したマニュアルを GitHub Pages にデプロイします。
+
+リリースの手順は次のとおりです。
+
+1. `CHANGELOG.md` の `[X.Y.Z]` の節に日付を入れ、コミットします。
+2. `git tag vX.Y.Z` でタグを付け、`git push origin vX.Y.Z` で push します。
 
 ## テスト
 

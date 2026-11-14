@@ -4,3 +4,9 @@ out/
 # Personal settings; copy config.example.json to the microSD card instead.
 config.json
 __pycache__/
+# Starlight (docs/)
+docs/node_modules/
+docs/dist/
+docs/.astro/
+# Firmware copied for local Web Flasher checks (tools/package_firmware.py --web)
+docs/public/firmware/

@@ -6,7 +6,7 @@ M5Stack 用のグレイラインマップです。世界地図に昼・夜・薄
 
 | 写真風 (既定) | 薄明の塗り分け | グリッドと月の重ね描き | 詳細画面 |
 | --- | --- | --- | --- |
-| ![写真風の地図](docs/images/map-photo.png) | ![薄明の塗り分け](docs/images/map-zones.png) | ![グリッドと月](docs/images/map-overlay.png) | ![詳細画面](docs/images/info-screen.png) |
+| ![写真風の地図](docs/src/assets/images/map-photo.png) | ![薄明の塗り分け](docs/src/assets/images/map-zones.png) | ![グリッドと月](docs/src/assets/images/map-overlay.png) | ![詳細画面](docs/src/assets/images/info-screen.png) |
 
 ## 特徴
 

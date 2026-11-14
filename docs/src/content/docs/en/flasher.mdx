@@ -1,0 +1,25 @@
+---
+title: Web Flasher
+description: Install the m5-grayline firmware from your browser.
+---
+
+import Flasher from '../../../components/Flasher.astro';
+
+You can install the m5-grayline firmware on M5Stack Basic from your browser. The Web Flasher writes the full image (bootloader, partition table and application) at address `0x0`.
+
+:::caution[Supported browsers]
+The Web Flasher uses the Web Serial API, so it works only in **Google Chrome** and **Microsoft Edge** on a computer. Safari, Firefox and mobile browsers are not supported.
+:::
+
+## Steps
+
+1. Connect the device to your computer with a USB cable. If no port appears, install the CH9102 driver; see [Installing the firmware](../install/#preparation-connecting-the-device).
+2. Click the button below and select the serial port of the device.
+3. Select "Install". If you are asked whether to erase the device, note that erasing also clears the map style and the GeoIP result stored on the device. `config.json` on the microSD card is not affected.
+4. When the installation finishes, the device restarts.
+
+<Flasher lang="en" />
+
+## After installing
+
+Set up Wi-Fi and your location: see [Configuration (config.json)](../config/).
