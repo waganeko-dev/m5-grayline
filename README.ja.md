@@ -29,7 +29,7 @@ M5Stack 用のグレイラインマップです。世界地図に昼・夜・薄
 
 ## 書き込み方法
 
-ブラウザから書き込める Web Flasher と、ユーザーマニュアルは準備中です。当面は次のいずれかの方法で書き込んでください。
+詳しくは [ユーザーマニュアル](https://waganeko-dev.github.io/m5-grayline/) を参照してください。いちばん手軽なのは、ブラウザから書き込める [Web Flasher](https://waganeko-dev.github.io/m5-grayline/flasher/) です (パソコンの Google Chrome または Microsoft Edge が必要です)。次の方法でも書き込めます。
 
 ### GitHub Releases から
 

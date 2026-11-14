@@ -34,8 +34,9 @@ Other M5Stack models are not tested.
 
 ## Installing
 
-A browser-based installer (Web Flasher) and a user manual are in preparation.
-For now, use one of the following.
+See the [user manual](https://waganeko-dev.github.io/m5-grayline/en/) for details.
+The easiest way is the [Web Flasher](https://waganeko-dev.github.io/m5-grayline/en/flasher/)
+(Google Chrome or Microsoft Edge on a computer). You can also use one of the following.
 
 ### From GitHub Releases
 
