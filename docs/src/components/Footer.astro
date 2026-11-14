@@ -1,19 +1,19 @@
 ---
-// Starlight's footer plus a link box to the blog article (URL in src/site.config.mjs).
+// Starlight's footer plus a link box to the blog article in the page's language (URLs in src/site.config.mjs).
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { BLOG_URL } from '../site.config.mjs';
 
 const isJa = Astro.locals.starlightRoute.lang === 'ja';
 const text = isJa
-  ? { title: 'ブログ記事', body: '開発の経緯や使い方の紹介は、ブログ記事を参照してください。', link: 'ブログ記事を読む' }
-  : { title: 'Blog article', body: 'Read the blog article for the background and more examples.', link: 'Read the article' };
+  ? { url: BLOG_URL.ja, title: 'ブログ記事', body: '作った経緯や、実機の写真と動画をブログ記事で紹介しています。', link: 'ブログ記事を読む' }
+  : { url: BLOG_URL.en, title: 'Blog article', body: 'The blog article tells why I made it and shows the device in photos and a video.', link: 'Read the article' };
 ---
 
 <Default />
 <aside class="blog-box" aria-label={text.title}>
   <p class="blog-title">{text.title}</p>
   <p>{text.body}</p>
-  <a href={BLOG_URL} rel="noopener">{text.link} →</a>
+  <a href={text.url} rel="noopener">{text.link} →</a>
 </aside>
 
 <style>
