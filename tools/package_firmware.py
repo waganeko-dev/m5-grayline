@@ -9,6 +9,7 @@ Writes:
   <out>/m5-grayline-<version>-app.bin    application only, flashed at 0x10000
   <web>/firmware/<version>/m5-grayline-<version>-full.bin   (with --web)
   <web>/firmware/manifest.json                              (with --web, for ESP Web Tools)
+With --web, <web>/firmware/ is recreated, so it holds only this version.
 
 The flash layout (offsets of the bootloader, partition table and boot_app0)
 is read from `pio project metadata`, so it follows platformio.ini.
@@ -95,6 +96,7 @@ def main():
 
     if args.web:
         fw_root = os.path.join(ROOT, args.web, "firmware")
+        shutil.rmtree(fw_root, ignore_errors=True)   # generated; keep only this version
         ver_dir = os.path.join(fw_root, version)
         os.makedirs(ver_dir, exist_ok=True)
         shutil.copyfile(full, os.path.join(ver_dir, os.path.basename(full)))
