@@ -17,9 +17,9 @@
 ### Changed
 - `tools/gen_photomaps.py` は Pillow があれば使い、なければ macOS の `sips` を使います
 
-## [0.1.0] - 2026-11-14
+## 0.1.0 - 2026-11-14
 
-最初のリリースです。対象は M5Stack Basic V2.6 です。
+非公開の開発版です。このリポジトリでは公開していません。対象は M5Stack Basic V2.6 です。
 
 ### Added
 - 正距円筒図法の世界地図に昼・夜・薄明 (市民、航海、天文) とグレイラインを描画
@@ -35,5 +35,4 @@
 - ファームウェアのバージョン表示 (起動時と詳細画面)
 - 単体テスト (`pio test -e native`) と実機の画面確認スクリプト (`tools/sweep_locations.py`)
 
-[Unreleased]: https://github.com/atsuo-takahashi/m5-grayline/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/atsuo-takahashi/m5-grayline/releases/tag/v0.1.0
+[Unreleased]: https://github.com/atsuo-takahashi/m5-grayline/commits/main
