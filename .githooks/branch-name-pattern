@@ -1,0 +1,1 @@
+^(feature|fix|docs|chore)/[a-z0-9][a-z0-9._/-]*$
