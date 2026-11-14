@@ -62,6 +62,9 @@ Unit tests of the calculation code run on the PC:
 pio test -e native
 ```
 
+See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) (in Japanese) for serial commands,
+tools, tests and the versioning policy.
+
 ## Configuration
 
 Settings are read from `/grayline/config.json` on the microSD card. If the

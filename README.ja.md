@@ -53,6 +53,8 @@ pio run -t upload
 pio test -e native
 ```
 
+シリアルコマンド、ツール、テスト、バージョンの付け方は [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) を参照してください。
+
 ## 設定 (config.json)
 
 設定は microSD の `/grayline/config.json` から読み込みます。ファイルがない場合は、既定値で自動作成します。microSD を PC に挿して、Wi-Fi の SSID とパスワードを記入してください。例は [config.example.json](config.example.json) を参照してください。
