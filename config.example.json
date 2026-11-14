@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "wifi": { "ssid": "your-ssid", "password": "your-password" },
+  "home": {
+    "name": "Tokyo",
+    "lat": 35.6895,
+    "lon": 139.6917,
+    "geoip": true,
+    "ipinfo_token": ""
+  },
+  "map": { "center_lon": 139.6917 },
+  "time": {
+    "tz_label": "JST",
+    "tz_offset_min": 540,
+    "ntp": ["ntp.nict.jp", "time.google.com", "pool.ntp.org"],
+    "ntp_interval_min": 360
+  },
+  "display": { "brightness": 160, "dim_brightness": 16, "wake_sec": 30, "day_alt_deg": -6 }
+}

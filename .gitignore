@@ -1,0 +1,6 @@
+.pio/
+.vscode/
+out/
+# Personal settings; copy config.example.json to the microSD card instead.
+config.json
+__pycache__/
