@@ -10,16 +10,23 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 未定
+
+公開リポジトリでの最初のリリースです。対象は M5Stack Basic V2.6 です。
+
 ### Added
 - `config.json` の `home.ipinfo_token` (任意): 設定すると ipinfo.io への問い合わせにアクセストークンを付けます
 - `LICENSE` (MIT)、`THIRD_PARTY_NOTICES.md`、`config.example.json`、英語版 README
+- ユーザーマニュアル (日本語・英語、GitHub Pages) と、ブラウザから書き込める Web Flasher
+- GitHub Actions による CI (テスト、ビルド、マニュアルのビルド) とリリースの自動化
+- `tools/package_firmware.py`: 一括イメージとアプリケーション単体のイメージを作成
 
 ### Changed
 - `tools/gen_photomaps.py` は Pillow があれば使い、なければ macOS の `sips` を使います
 
-## 0.1.0 - 2026-11-14
+## 0.1.0 - 2026-11-14 (開発版の履歴)
 
-非公開の開発版です。このリポジトリでは公開していません。対象は M5Stack Basic V2.6 です。
+非公開の開発版です。このリポジトリにはタグと Release はありません。対象は M5Stack Basic V2.6 です。
 
 ### Added
 - 正距円筒図法の世界地図に昼・夜・薄明 (市民、航海、天文) とグレイラインを描画
@@ -35,4 +42,5 @@
 - ファームウェアのバージョン表示 (起動時と詳細画面)
 - 単体テスト (`pio test -e native`) と実機の画面確認スクリプト (`tools/sweep_locations.py`)
 
-[Unreleased]: https://github.com/atsuo-takahashi/m5-grayline/commits/main
+[Unreleased]: https://github.com/atsuo-takahashi/m5-grayline/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/atsuo-takahashi/m5-grayline/releases/tag/v0.2.0
